@@ -50,7 +50,6 @@ const Login = () => {
     setIsSubmitting(false);
   };
 
-  // For demo purposes, we'll provide a way to easily log in with an existing account
   const loginWithDemo = async (email: string) => {
     form.setValue("email", email);
     form.setValue("password", "password123");

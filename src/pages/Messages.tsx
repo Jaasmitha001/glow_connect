@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
@@ -74,7 +74,62 @@ const Messages = () => {
       timestamp: "Sun",
       unread: false,
       online: true
+    },
+    {
+      id: 6,
+      name: "Ethan Walker",
+      avatar: "https://randomuser.me/api/portraits/men/43.jpg",
+      lastMessage: "Let me know once it's done.",
+      timestamp: "9:15 AM",
+      unread: true,
+      online: false
+    },
+    {
+      id: 7,
+      name: "Lily Martinez",
+      avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+      lastMessage: "Can you check the document I sent?",
+      timestamp: "Today",
+      unread: false,
+      online: true
+    },
+    {
+      id: 8,
+      name: "Noah Kim",
+      avatar: "https://randomuser.me/api/portraits/men/23.jpg",
+      lastMessage: "Thanks! Catch up soon.",
+      timestamp: "Wed",
+      unread: false,
+      online: false
+    },
+    {
+      id: 9,
+      name: "Maya Singh",
+      avatar: "https://randomuser.me/api/portraits/women/17.jpg",
+      lastMessage: "Are we still on for tonight?",
+      timestamp: "Tue",
+      unread: true,
+      online: true
+    },
+    {
+      id: 10,
+      name: "Ryan Zhao",
+      avatar: "https://randomuser.me/api/portraits/men/61.jpg",
+      lastMessage: "Let’s wrap this up today.",
+      timestamp: "Mon",
+      unread: false,
+      online: false
+    },
+    {
+      id: 11,
+      name: "Ava Thompson",
+      avatar: "https://randomuser.me/api/portraits/women/14.jpg",
+      lastMessage: "Loved your recent work!",
+      timestamp: "Sun",
+      unread: true,
+      online: true
     }
+    
   ];
 
   const mockMessages = [
@@ -128,8 +183,8 @@ const Messages = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      <main className="flex-1 container py-6 page-transition">
-        <Card className="h-[calc(100vh-16rem)] overflow-hidden">
+      <main className="flex-1 container py-6 page-transition flex flex-col">
+        <Card className="flex-1 overflow-hidden flex flex-col">
           <div className="grid grid-cols-1 md:grid-cols-12 h-full">
             {/* Contact List */}
             <div className="md:col-span-4 border-r h-full overflow-hidden flex flex-col">

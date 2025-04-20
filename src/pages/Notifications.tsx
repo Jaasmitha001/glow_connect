@@ -50,7 +50,7 @@ const Notifications = () => {
       },
       content: "liked your post about React development",
       timestamp: "2 hours ago",
-      unread: true
+      unread: false
     },
     {
       id: 3,
@@ -94,7 +94,7 @@ const Notifications = () => {
       },
       content: "accepted your connection request",
       timestamp: "3 days ago",
-      unread: false
+      unread: true
     },
     {
       id: 7,

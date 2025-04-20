@@ -60,7 +60,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Check localStorage for existing session
     const storedUser = localStorage.getItem("glowconnect_user");
     if (storedUser) {
       try {
@@ -109,7 +108,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
           toast.error("Email already in use");
           resolve(false);
         } else {
-          // Create a new user (in a real app, we'd send this to the backend)
           const newUser = {
             id: Math.random().toString(36).substr(2, 9),
             email,
